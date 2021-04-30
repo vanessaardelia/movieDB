@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="tab">
     <div class="tabs_wrapper">
       <label class="tab_item"
@@ -13,6 +14,7 @@
       <span class="shape" :style="sliderStyle"></span>
     </div>
   </div>
+</div>
 </template>
 
 <script src="./js/tab.js"></script>

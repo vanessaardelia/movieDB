@@ -29,18 +29,26 @@
         </div>
       </div>
     </section>
-    <section class="inner_content trailer">
+    <section class="inner_content trailer bg-img" :style="imageBackground">
       <div class="trailer__container">
         <div class="trailer__heading">
-          <h2>Latest Trailers</h2>
+          <h2 class="trailer__heading-text">Latest Trailers</h2>
         </div>
         <div>
           <div class="trailer__wrapper">
             <Trailer
               class="trailer__movie"
               :items="movie_trailer"
+              @hover="hover"
             ></Trailer>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="inner_content popular">
+      <div class="popular__container">
+        <div class="popular__heading">
+          <h2>What's Popular</h2>
         </div>
       </div>
     </section>
@@ -68,6 +76,7 @@ export default {
       trailer: [],
       movie_trailer: [],
       youtube_key_trailer: [],
+      backdrop: '/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg',
       tabIdx: '',
       items: [{
         name: 'Trending'
@@ -80,9 +89,24 @@ export default {
       }]
     }
   },
-  watch: {
+  computed: {
+    imageBackground() {
+      return {
+        backgroundImage: `url(${'https://image.tmdb.org/t/p/w500/' + this.backdrop})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        minHeight: '300px',
+        height: 'calc(100vh / 2.5)',
+        maxHeight: '360px',
+        backgroundPosition: 'top center',
+        backgroundRepeat:'no-repeat'
+      }
+    }
   },
   methods: {
+    hover (path) {
+      this.backdrop = path
+    },
     getResult (query) {
       if (query) {
         axios.get('https://api.themoviedb.org/3/search/movie?api_key=b1277a04710552a426ddcd619c0256bf&query=' + query).then(
@@ -176,6 +200,11 @@ export default {
   box-sizing: border-box;
   margin: auto;
 }
+
+.bg-img{
+  transition: all 0.5s;
+}
+
 .discovery {
   background-image: linear-gradient(to right, rgba($tmdbDarkBlue, 0.8) 40%, rgba($tmdbDarkBlue, 0) 100%), url('../assets/movie-banner.jpg');
   min-height: 300px;
@@ -237,6 +266,9 @@ export default {
   &__movie {
     display: inline-flex;
     gap: 16px;
+    @media only screen and (max-width: 800px) {
+      gap: 8px;
+    }
   }
 }
 
@@ -248,13 +280,17 @@ export default {
   &__container {
     width: -webkit-fill-available;
     padding: 30px 56px;
+    background: linear-gradient(to right, rgba($tmdbDarkBlue, 0.75) 0%, rgba($tmdbDarkBlue, 0.75) 100%);
     @media only screen and (max-width: 800px) {
-      padding: 30px 24px;
+      padding: 10px 24px 30px;
     }
   }
   &__heading {
     display: flex;
     align-items: center;
+    &-text {
+      color: $tmdbWhite;
+    }
   }
   &__wrapper {
     overflow-x: auto;
@@ -263,6 +299,9 @@ export default {
   &__movie {
     display: inline-flex;
     gap: 16px;
+    @media only screen and (max-width: 800px) {
+      gap: 8px;
+    }
   }
 }
 </style>

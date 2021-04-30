@@ -2,11 +2,12 @@ export default {
     name: 'Trailer',
     data () {
       return {
+        backdrop: ''
       }
     },
     props: {
       title: String,
-      items: Array
+      items: Array,
     },
     watch: {
     },
@@ -19,6 +20,10 @@ export default {
         cardImage (fileName) {
             var d = fileName
             return 'https://image.tmdb.org/t/p/w500/'+ d
+        },
+        mouseOver (backdrop) {
+            this.backdrop = backdrop
+            this.$emit('hover', backdrop)
         }
     },
     created () {
