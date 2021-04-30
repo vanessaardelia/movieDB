@@ -42,7 +42,7 @@ export default {
   min-height: 300px;
   height: calc(100vh / 2.5);
   max-height: 360px;
-  &__search { 
+  &__search {
     max-width: $max-width;
   }
 }

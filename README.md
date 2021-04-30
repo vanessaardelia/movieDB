@@ -1,4 +1,4 @@
-# movie_web
+# movie_tmdb
 
 > A Vue.js project
 
