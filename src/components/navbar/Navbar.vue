@@ -62,7 +62,7 @@ nav {
       padding: 0px;
     }
     &-link:hover {
-      color: #71c55d;
+      color: $accountTeal;
       cursor: pointer;
     }
   }

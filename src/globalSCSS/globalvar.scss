@@ -24,3 +24,15 @@ $shadow: 0 0 24px -4px rgba(0, 0, 0, 0.12) !default;
 $font-color-1: rgba(0,0,0,0.87) !default;
 $font-color-2: rgba(0,0,0,0.6) !default;
 $max-width: 1200px !default;
+
+::-webkit-scrollbar
+{
+    background-color: #F5F5F5;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+	background-color: $accountSilver;
+}

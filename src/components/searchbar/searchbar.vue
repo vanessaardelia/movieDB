@@ -16,14 +16,15 @@
 <style lang="scss" scoped>
 @import '@/globalSCSS/globalvar.scss';
 .searchbar {
-  width: 100%;
-  height: 46px;
+  width: inherit;
+  height: 36px;
   border-radius: 40px;
   display: flex;
   align-items: center;
   padding-left: 20px;
   position: relative;
-  background: red;
+  max-width: 1200px;
+  background: $tmdbWhite;
   &__input {
     border: none;
     height: 25px;
@@ -36,14 +37,14 @@
   &__btn {
     background: $tmdbLightGreen;
     border-radius: 20px;
-    height: 40px;
-    min-width: 40px;
+    height: 38px;
+    min-width: 38px;
     display: flex;
     align-items: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     justify-content: center;
     cursor: pointer;
-    right: 2px;
+    right: 0px;
     position: absolute;
     img {
       width: 18px;
