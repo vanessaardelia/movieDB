@@ -3,14 +3,13 @@
     <div class="navbar">
       <div class="navbar__container">
         <div class="navbar__logo">
-          <img src="@/assets/tmdb.svg" />
+          <img src="@/assets/tmdb.svg" @click="goToHome"/>
         </div>
         <div class="navbar__route">
           <ul>
             <li><a class="navbar__route-link">Movie</a></li>
             <li><a class="navbar__route-link">TV Show</a></li>
             <li><a class="navbar__route-link">People</a></li>
-            <li><a class="navbar__route-link">More</a></li>
           </ul>
         </div>
       </div>
@@ -35,12 +34,17 @@ nav {
   position: relative;
   box-shadow: $shadow;
   @media only screen and (max-width: 768px) {
-    height: 100px;
+    height: 46px;
+    padding: 12px;
   }
   &__logo {
+    cursor: pointer;
     img {
       width: auto;
       height: 24px;
+      @media only screen and (max-width: 768px) {
+        height: 16px;
+      }
     }
   }
   &__route{
@@ -53,6 +57,7 @@ nav {
       @media only screen and (max-width: 768px) {
         width: max-content;
         padding: 0px 12px;
+        font-size: 14px;
       }
     }
     ul {
@@ -60,6 +65,10 @@ nav {
       display: flex;
       list-style: none;
       padding: 0px;
+      @media only screen and (max-width: 768px) {
+        justify-content: center;
+        margin: 8px;
+      }
     }
     &-link:hover {
       color: $accountTeal;

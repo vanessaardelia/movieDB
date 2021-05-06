@@ -3,7 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import VueYoutube from 'vue-youtube'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import ReadMore from 'vue-read-more';
+ 
+Vue.use(ReadMore);
+Vue.use(VueYouTubeEmbed)
+Vue.use(VueYoutube)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

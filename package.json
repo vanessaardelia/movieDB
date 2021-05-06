@@ -14,8 +14,14 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "moment": "^2.29.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-css-percentage-circle": "^2.0.0",
+    "vue-read-more": "^1.1.1",
+    "vue-router": "^3.0.1",
+    "vue-youtube": "^1.4.0",
+    "vue-youtube-embed": "^2.2.2",
+    "vue2-circle-progress": "^1.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

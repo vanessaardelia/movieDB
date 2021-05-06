@@ -20,6 +20,7 @@ $accountYellow: rgb( 210,144,1) !default;
 $accountRed: rgb( 212,2,66) !default;
 $imageBorderRadius: 8px !default;
 $tmdbWhite: #fff !default;
+$tmdbBlack: #000 !default;
 $shadow: 0 0 24px -4px rgba(0, 0, 0, 0.12) !default;
 $font-color-1: rgba(0,0,0,0.87) !default;
 $font-color-2: rgba(0,0,0,0.6) !default;
@@ -27,10 +28,12 @@ $max-width: 1200px !default;
 
 ::-webkit-scrollbar
 {
-    background-color: #F5F5F5;
+    background-color: transparent;
     height: 8px;
+    border-radius: 10px;
+    width: 8px;
     @media only screen and (max-width: 800px) {
-        height: 4px;
+        height: 6px;
     }
 }
 

@@ -2,24 +2,27 @@
   <div id="app">
     <Navbar></Navbar>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/footer/footer'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 #app {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

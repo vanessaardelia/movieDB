@@ -12,6 +12,12 @@ export default {
       
     },
     methods: {
+      goToHome () {
+        const path = `/`
+        if (path !== this.$router.currentRoute.path) {
+          this.$router.push({name: 'Home'})
+        }
+      }
     },
     created () {
       

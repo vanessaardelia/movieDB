@@ -6,12 +6,12 @@
       :key="idx"
       @click="cardClick(idx)"
     >
+      <VuePercentageCircle
+        class="score" size="medium" :animate="true" :active-color="percentColor" complete-color="green" :percent="item.vote_average * 10"
+      ></VuePercentageCircle>
       <img :src="cardImage(item.poster_path)" />
       <div class="card-content">
         <h3 class="card-title">{{ item.name || item.title }}</h3>
-        <p class="card-actors">
-          asdasdada
-        </p>
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@
 h3 {
   margin: 0;
 }
+
 .card {
   &-wrapper{
     background-size: cover;
@@ -34,19 +35,21 @@ h3 {
     flex-direction: column;
     margin: 0 0 58px 0;
     transition: all 0.3s;
+    .score {
+      position: absolute;
+      bottom: 32px;
+      z-index: 100;
+      right: 8px;
+    }
     cursor: pointer;
     img {
       border-radius: $imageBorderRadius;
     }
   }
   &-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 100px;
+    height: 90px;
     width: calc(100% - 2rem);
-    border-radius: 20px;
+    border-radius: $imageBorderRadius;
     background-color: #ffffff;
     position: absolute;
     bottom: 0;
@@ -56,9 +59,9 @@ h3 {
     padding: 0 1rem;
   }
   &-title {
-    font-size: 15px;
+    font-size: 12px;
     text-align: start;
-    margin: 2px 0;
+    margin: 16px 0;
   }
   &-actors {
     font-size: 11px;
