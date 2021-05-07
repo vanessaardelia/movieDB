@@ -7,8 +7,8 @@
         </div>
         <div class="navbar__route">
           <ul>
-            <li><a class="navbar__route-link">Movie</a></li>
-            <li><a class="navbar__route-link">TV Show</a></li>
+            <li><a class="navbar__route-link" @click="goToMovie('all_movies')">Movie</a></li>
+            <li><a class="navbar__route-link" @click="goToMovie('all_tv')">TV Show</a></li>
             <li><a class="navbar__route-link">People</a></li>
           </ul>
         </div>

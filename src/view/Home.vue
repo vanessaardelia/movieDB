@@ -8,7 +8,12 @@
             <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
           </div>
           <div class="discovery__search">
-            <Searchbar class="discovery__search" v-model="query" @input="getResult(query)"></Searchbar>
+            <Searchbar
+              class="discovery__search"
+              v-model="query"
+              @input="getResult(query)"
+              @btnClick="goToMovie(query)"
+            ></Searchbar>
             <ul class="dropdown-menu" :class="dropdownClasses">
               <li
                 v-for="(suggestion, idx) in results"
@@ -140,6 +145,7 @@ export default {
       results: [],
       movie_trailer: [],
       youtube_key_trailer: [],
+      goToMovie_id: [],
       clicked_trailer: '',
       modal: false,
       backdrop: '/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg',
@@ -191,15 +197,12 @@ export default {
     }
   },
   methods: {
-    isActive(index) {
-      return index === this.current;
-    },
     goToDetail (idx) {
       if (this.movies[idx].media_type) {
         this.$router.push({name: 'movieDetail', params: { movieid: this.movies[idx].id, mediaType: this.movies[idx].media_type }})
       }
     },
-    suggestionClick(index) {
+    suggestionClick (index) {
       this.$router.push({name: 'movieDetail', params: { movieid: this.results[index].id, mediaType: 'movie' }})
     },
     goToDetailUpcoming (idx) {
@@ -213,6 +216,15 @@ export default {
     goToDetailTrending (idx) {
       if (this.trending_movies[idx].media_type) {
         this.$router.push({name: 'movieDetail', params: { movieid: this.trending_movies[idx].id, mediaType: 'this.trending_movies[idx].media_type' }})
+      }
+    },
+    goToMovie (query) {
+      if (query) {
+        if (this.results.length > 0) {
+          this.$router.push({name: 'movie', params: { query: query }})
+        }
+      } else {
+        return
       }
     },
     triggerTrailer (idx) {

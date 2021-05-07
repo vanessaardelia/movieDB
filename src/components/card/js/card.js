@@ -23,8 +23,12 @@ export default {
         this.$emit('cardClick', idx)
       },
       cardImage (fileName) {
-        var d = fileName
-        return 'https://image.tmdb.org/t/p/w500/'+d
+        if (fileName) {
+          var d = fileName
+          return 'https://image.tmdb.org/t/p/w500/'+ d
+        } else {
+          return require(`@/assets/male_cast.jpg`)
+        }
       }
     },
     created () {

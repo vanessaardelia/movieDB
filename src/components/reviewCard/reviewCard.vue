@@ -38,7 +38,7 @@ h2 {
     img {
       width: 50px;
       height: 50px;
-      border-radius: 50px; 
+      border-radius: 50px;
       object-fit: cover;
       margin-right: 16px;
       @media only screen and (max-width: 800px) {

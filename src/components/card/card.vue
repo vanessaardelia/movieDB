@@ -24,8 +24,14 @@ h3 {
   margin: 0;
 }
 
+img {
+  width: 150px;
+  height: auto;
+}
+
 .card {
-  &-wrapper{
+  &-wrapper {
+    background: $tmdbWhite;
     background-size: cover;
     width: 150px;
     min-height: calc(150px * 1.5);
@@ -35,6 +41,8 @@ h3 {
     flex-direction: column;
     margin: 0 0 58px 0;
     transition: all 0.3s;
+    border: .5px solid rgba($darkerGrey, 1);
+    border-radius: $imageBorderRadius;
     .score {
       position: absolute;
       bottom: 32px;
