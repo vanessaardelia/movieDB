@@ -6,7 +6,8 @@ import router from './router'
 import VueYoutube from 'vue-youtube'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import ReadMore from 'vue-read-more'
-
+import Paginate from 'vuejs-paginate'
+Vue.use(Paginate)
 Vue.use(ReadMore)
 Vue.use(VueYouTubeEmbed)
 Vue.use(VueYoutube)

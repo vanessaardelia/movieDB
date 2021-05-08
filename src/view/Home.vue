@@ -215,7 +215,7 @@ export default {
     },
     goToDetailTrending (idx) {
       if (this.trending_movies[idx].media_type) {
-        this.$router.push({name: 'movieDetail', params: { movieid: this.trending_movies[idx].id, mediaType: 'this.trending_movies[idx].media_type' }})
+        this.$router.push({name: 'movieDetail', params: { movieid: this.trending_movies[idx].id, mediaType: this.trending_movies[idx].media_type }})
       }
     },
     goToMovie (query) {

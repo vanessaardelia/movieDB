@@ -27,6 +27,15 @@ h3 {
 img {
   width: 150px;
   height: auto;
+  @media only screen and (max-width: 800px) {
+    width: 120px;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+  }
 }
 
 .card {
@@ -43,6 +52,14 @@ img {
     transition: all 0.3s;
     border: .5px solid rgba($darkerGrey, 1);
     border-radius: $imageBorderRadius;
+    @media only screen and (max-width: 800px) {
+      width: 120px;
+      min-height: calc(120px * 1.5);
+      height: calc(120px * 1.5);
+    }
+    @media only screen and (max-width: 500px) {
+      flex-basis: 45%;
+    }
     .score {
       position: absolute;
       bottom: 32px;

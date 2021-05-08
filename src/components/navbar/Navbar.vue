@@ -6,10 +6,9 @@
           <img src="@/assets/tmdb.svg" @click="goToHome"/>
         </div>
         <div class="navbar__route">
-          <ul>
+          <ul class="ul">
             <li><a class="navbar__route-link" @click="goToMovie('all_movies')">Movie</a></li>
             <li><a class="navbar__route-link" @click="goToMovie('all_tv')">TV Show</a></li>
-            <li><a class="navbar__route-link">People</a></li>
           </ul>
         </div>
       </div>
@@ -60,7 +59,7 @@ nav {
         font-size: 14px;
       }
     }
-    ul {
+    .ul {
       position: relative;
       display: flex;
       list-style: none;

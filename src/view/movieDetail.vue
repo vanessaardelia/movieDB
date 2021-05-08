@@ -68,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="inner_content cast">
+    <section v-if="cast.length > 0" class="inner_content cast">
       <div class="cast__container">
         <div class="cast__heading">
           <h2>Cast</h2>
@@ -512,7 +512,7 @@ export default {
       flex-direction: column;
       .score {
         position: absolute;
-        bottom: 80px;
+        bottom: 560px;
         z-index: 100;
         left: calc(100% - 35%);
       }
