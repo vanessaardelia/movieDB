@@ -74,13 +74,13 @@ export default {
         axios.get('https://api.themoviedb.org/3/discover/tv?api_key=b1277a04710552a426ddcd619c0256bf&sort_by=vote_average.desc&include_adult=false&release_date.lte=' + today + '&page=' + this.currentPage).then(
           response => {
             this.results = response.data.results
-            this.movieType = 'tv'        
+            this.movieType = 'tv'
           })
       }
     },
     goToDetail (idx) {
       this.$router.push({name: 'movieDetail', params: { movieid: this.results[idx].id, mediaType: this.movieType }})
-    },
+    }
   },
   mounted () {
     this.query = this.$route.params.query
