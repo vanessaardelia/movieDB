@@ -20,8 +20,8 @@ export default {
       },
       goToMovie (data) {
         this.$router.push({name: 'movie', params: { query: data }})
-        // window.location.reload(true)
-        // window.scrollTo(0, 0)
+        window.location.reload(true)
+        window.scrollTo(0, 0)
       }
     },
     created () {

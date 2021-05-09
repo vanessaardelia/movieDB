@@ -31,5 +31,5 @@ export default new Router({
     }
   ],
   // mode: 'history'
-  mode: 'hash'
+  mode: 'hash' //kalau di refresh ga 404
 })
