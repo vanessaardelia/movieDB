@@ -30,5 +30,6 @@ export default new Router({
       component: movie
     }
   ],
-  mode: 'history'
+  // mode: 'history'
+  mode: 'hash'
 })
