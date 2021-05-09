@@ -122,10 +122,10 @@
 </template>
 
 <script>
-import Searchbar from '@/components/Searchbar/Searchbar'
-import Tab from '@/components/Tab/Tab'
-import Card from '@/components/Card/Card'
-import Trailer from '@/components/Trailer/Trailer'
+import Searchbar from '../components/searchbar/searchbar'
+import Tab from '../components/tab/tab'
+import Card from '../components/card/card'
+import Trailer from '../components/trailer/trailer'
 import axios from 'axios'
 
 export default {

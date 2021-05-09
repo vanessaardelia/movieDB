@@ -167,8 +167,8 @@
 import axios from 'axios'
 import moment from 'moment'
 import VuePercentageCircle from 'vue-css-percentage-circle'
-import Trailer from '@/components/Trailer/Trailer'
-import ReviewCard from '@/components/ReviewCard/ReviewCard'
+import Trailer from '../components/trailer/trailer'
+import ReviewCard from '../components/reviewCard/reviewCard'
 
 export default {
   name: 'movieDetail',

@@ -33,7 +33,7 @@
 </template>
 <script>
 import axios from 'axios'
-import ReviewCard from '@/components/ReviewCard/ReviewCard'
+import ReviewCard from '../components/reviewCard/reviewCard'
 
 export default {
   name: 'reviewDetail',

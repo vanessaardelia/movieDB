@@ -22,7 +22,7 @@
 </template>
 <script>
 import axios from 'axios'
-import Card from '@/components/Card/Card'
+import Card from '../components/card/card'
 import Paginate from 'vuejs-paginate'
 
 export default {
