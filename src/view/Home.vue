@@ -206,7 +206,6 @@ export default {
       this.$router.push({name: 'movieDetail', params: { movieid: this.results[index].id, mediaType: 'movie' }})
     },
     goToDetailUpcoming (idx) {
-      this.tabIdx
       if (this.tabIdx === 1) {
         this.$router.push({name: 'movieDetail', params: { movieid: this.upcoming_movies[idx].id, mediaType: 'tv' }})
       } else {
@@ -223,8 +222,6 @@ export default {
         if (this.results.length > 0) {
           this.$router.push({name: 'movie', params: { query: query }})
         }
-      } else {
-        return
       }
     },
     triggerTrailer (idx) {

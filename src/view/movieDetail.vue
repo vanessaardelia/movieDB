@@ -327,7 +327,7 @@ export default {
             this.crewName = this.crewName.reduce((arr, item) => {
               const existing = arr.find(innerItem => innerItem.id === item.id)
               if (existing) {
-                existing.job = Array.isArray(existing.job)? existing.job : [existing.job]
+                existing.job = Array.isArray(existing.job) ? existing.job : [existing.job]
                 existing.job.push(item.job)
               } else {
                 arr.push(item)
@@ -337,7 +337,7 @@ export default {
             this.crewName = this.crewName.reduce((arr, item) => {
               const onejob = Array.isArray(item.job)
               if (!onejob) {
-                item.job = Array.isArray(item.job)? item.job : [item.job]
+                item.job = Array.isArray(item.job) ? item.job : [item.job]
                 arr.push(item)
               } else {
                 arr.push(item)
@@ -346,7 +346,7 @@ export default {
             }, [])
             // GET CAST
             this.cast = this.credits.cast
-        })
+          })
       } else {
         axios.get('https://api.themoviedb.org/3/tv/' + movieId + '/credits?api_key=b1277a04710552a426ddcd619c0256bf').then(
           response => {
@@ -364,7 +364,7 @@ export default {
             this.crewName = this.crewName.reduce((arr, item) => {
               const existing = arr.find(innerItem => innerItem.id === item.id)
               if (existing) {
-                existing.job = Array.isArray(existing.job)? existing.job : [existing.job]
+                existing.job = Array.isArray(existing.job) ? existing.job : [existing.job]
                 existing.job.push(item.job)
               } else {
                 arr.push(item)
@@ -374,7 +374,7 @@ export default {
             this.crewName = this.crewName.reduce((arr, item) => {
               const onejob = Array.isArray(item.job)
               if (!onejob) {
-                item.job = Array.isArray(item.job)? item.job : [item.job]
+                item.job = Array.isArray(item.job) ? item.job : [item.job]
                 arr.push(item)
               } else {
                 arr.push(item)
@@ -434,7 +434,7 @@ export default {
         })
       }
     },
-    setupWidth() {
+    setupWidth () {
       this.screenWidth = window.innerWidth
       if (this.screenWidth < 900) {
         this.circleSize = 'medium'

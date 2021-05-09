@@ -22,12 +22,12 @@ export default new Router({
     {
       path: '/reviewDetail/:mediaType/:movieId',
       name: 'reviewDetail',
-      component: reviewDetail,
+      component: reviewDetail
     },
     {
       path: '/movie/:query',
       name: 'movie',
-      component: movie,
+      component: movie
     }
   ],
   mode: 'history'

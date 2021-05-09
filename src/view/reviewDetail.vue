@@ -48,7 +48,7 @@ export default {
       details: []
     }
   },
-  methods : {
+  methods: {
     goToDetails (id, media) {
       this.$router.push({name: 'movieDetail', params: { movieid: id, mediaType: media }})
     },
@@ -84,8 +84,6 @@ export default {
           console.log(error)
         })
       } else {
-        console.log("masuk")
-        console.log(movieId)
         axios.get('https://api.themoviedb.org/3/tv/' + movieId + '/reviews?api_key=b1277a04710552a426ddcd619c0256bf').then(
           response => {
             if (response.data.results.length > 0) {
